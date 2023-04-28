@@ -8,7 +8,7 @@ var num=0;
         {
         alpha.map((letter =>(
             
-            <div key={num++} onClick={()=>alphaIndex(letter)} className="letters flex justify-center rounded-lg items-center h-8 w-8  bg-black text-white mx-3 my-1">
+            <div key={num++} onClick={()=>alphaIndex(letter)} className="cursor-pointer flex justify-center rounded-lg items-center h-8 w-8  bg-black text-white mx-3 my-1">
                 <h3 >{letter}</h3>
             </div>
         )))

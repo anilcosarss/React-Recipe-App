@@ -6,7 +6,7 @@ function RecipeInfo() {
     const [item, setItem] = useState();
     const { MealId } = useParams();
 
-    if (MealId != "") {
+    if (MealId !== "") {
         fetch(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`)
             .then(res => res.json())
             .then(data => {
@@ -21,7 +21,7 @@ function RecipeInfo() {
     }
 
     return (
-        <div className=''>
+        <div >
             {
                 (!item) ? "" : (<>
                     <div className="content flex flex-col items-center text-center text-white pt-5 ps-5">
@@ -55,7 +55,7 @@ function RecipeInfo() {
                         
                     </div>
                     <div className="video ">
-                            <iframe className='mx-auto mb-8' src={`https://www.youtube.com/embed/${vId}`} frameborder="0"></iframe>
+                            <iframe title='video' className='mx-auto mb-8' src={`https://www.youtube.com/embed/${vId}`} frameborder="0"></iframe>
                         </div>
                 </>
 
