@@ -24,7 +24,7 @@ const Meal = () => {
     }
 
     const searchRecipe = (evt) =>{
-        if(evt.key=="Enter"){
+        if(evt.key==="Enter"){
             setUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
         }
     }
