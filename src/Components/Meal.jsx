@@ -47,12 +47,12 @@ const Meal = () => {
     };
 
     const setIndex = (alpha) => {
-        setUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
+        setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
     }
 
     const searchRecipe = (evt) => {
         if (evt.key === "Enter") {
-            setUrl(`https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+            setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
         }
     }
     
