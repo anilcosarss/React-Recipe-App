@@ -86,7 +86,7 @@ const Meal = () => {
                         onKeyPress={searchRecipe}
                         placeholder="Search a meal.."
                         type="search"
-                        className="placeholder:text-slate-400  px-3  rounded-md w-72 h-8 mt-5 outline-none" />
+                        className="placeholder:text-slate-500 py-5 px-5 rounded-md w-72 h-8 mt-5 outline-none" />
                 </div>
                 <div className="max-w-[80%] w-[100%] mx-auto mt-12">
 

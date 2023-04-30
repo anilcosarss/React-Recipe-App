@@ -7,7 +7,8 @@
 
 }
 body {
-    background: linear-gradient(to bottom, rgb(220, 13, 82), rgb(124, 124, 240));
+    background: linear-gradient(to top, rgb(111, 56, 74), rgb(61, 61, 129));
+
 }
 ul li {
     background-color: rgb(2, 2, 2);
