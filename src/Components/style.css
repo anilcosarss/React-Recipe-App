@@ -9,3 +9,31 @@
 body {
     background: linear-gradient(to bottom, rgb(14, 34, 54), rgb(124, 124, 240));
 }
+ul li {
+    background-color: rgb(2, 2, 2);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+ul li:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    
+}
+ul li:first-child {
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
+
+ul li:not(:first-child) {
+    padding: 5px 0;
+    border-bottom: 1px solid white;
+
+}

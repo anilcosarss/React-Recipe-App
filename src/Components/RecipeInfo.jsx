@@ -7,7 +7,7 @@ function RecipeInfo() {
     const { MealId } = useParams();
 
     if (MealId !== "") {
-        fetch(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`)
             .then(res => res.json())
             .then(data => {
                 setItem(data.meals[0]);
@@ -21,15 +21,15 @@ function RecipeInfo() {
                 (!item) ? "" : (<>
                     <div className="content flex flex-col items-center text-center text-white pt-5 ps-5">
                         <h1 className='text-3xl font-bold bg-black px-3 py-2 mb-5 rounded-xl'>{item.strMeal}</h1>
-                        <img className=' hover:transition-all transition-all hover:max-w-[31%] max-w-[30%] border border-black rounded-[50px] ' src={item.strMealThumb} alt="" />
+                        <img className=' md:max-w-[30%] max-w-[60%] border border-black rounded-[50px] ' src={item.strMealThumb} alt="" />
                         <div className="inner-content mb-5 text-center">
                             <h2 className='bg-black text-2xl px-2 mt-2 mx-auto rounded-xl'>{item.strArea}</h2>
                             <h3 className='bg-black px-2 mt-2 mx-auto rounded-xl'>{item.strCategory}</h3>
 
                         </div>
                     </div>
-                    <div className="recipe-details text-white flex mx-auto mb-12 w-screen max-w-[80%] gap-12">
-                        <div className="ingredients bg-black w-1/2 mx-auto d-flex p-5 rounded-xl">
+                    <div className="recipe-details text-white flex md:flex-row flex-col mx-auto mb-12 w-screen max-w-[80%] gap-12">
+                        <div className="ingredients bg-black w-4/5 md:w-1/2 mx-auto d-flex p-5 rounded-xl text-center">
                             <h2 className='text-3xl font-bold border-b pb-3 inline'>Ingredients</h2>
                             <div className="mt-5">
                                 <h4>{item.strIngredient1} : {item.strMeasure1}</h4>
@@ -43,7 +43,7 @@ function RecipeInfo() {
                             </div>
 
                         </div>
-                        <div className="instructions w-1/2">
+                        <div className="instructions w-4/5 md:w-1/2 text-center">
                             <h2 className='text-3xl mb-3 border-b pb-3 font-bold'>Instructions</h2>
                             <h4>{item.strInstructions}</h4>
                         </div>
